@@ -86,7 +86,6 @@ function App() {
           .filter((r) => r.BUILDING_DISPLAY_NAME)
           .map((r) => r.BUILDING_DISPLAY_NAME);
         setBuildingOptions([...bOpts, "Other"]);
-        // Create a lookup for quick address autofill
         const bMap = {};
         function abbreviateStreetTypes(address) {
           return address.replace(
@@ -151,7 +150,7 @@ function App() {
     });
   }, []);
 
-  // Building field handler
+
   const handleBuildingSelect = (e) => {
     const name = e.target.value;
     let address = "";
@@ -221,7 +220,6 @@ function App() {
       : "";
 
   function phoneLine() {
-    // P: phone | C: cell | F: fax (all clickable)
     const parts = [];
     if (input.phone) parts.push(phoneLink("P:", input.phone));
     if (input.cell) parts.push(phoneLink("C:", input.cell));
