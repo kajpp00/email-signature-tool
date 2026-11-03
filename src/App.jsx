@@ -284,13 +284,18 @@ function App() {
     }
   };
 
+  const blueBg = {
+      background:"#005daa",
+      color:"white"
+  }
+
   return (
     <div className="container-fluid my-5">
       <h1 className="text-center mb-5">Email Signature Generator</h1>
       <div className="row justify-content-center align-item-start">
         {/* Left: The form */}
         <div className="col-md-5 col-12 mb-4 mb-md-0">
-          <div className="card h-100 shadow">
+          <div className="bg-light card h-100 shadow">
             <div className="card-body">
               <form autoComplete="off" onSubmit={handleSubmit} noValidate>
                 <div className="form-group text-left">
@@ -436,7 +441,7 @@ function App() {
                   {renderError("email")}
                 </div>
                 <div className="form-row">
-                  <div className="form-group col-6 text-left">
+                  <div className="form-group col-4 text-left">
                     <label htmlFor="building">Building</label>
                     <select
                       name="building"
@@ -465,14 +470,27 @@ function App() {
                     )}
                     {renderError("building")}
                   </div>
-                  <div className="form-group col-6 text-left">
-                    <label htmlFor="room">Room Number</label>
+                  <div className="form-group col-4 text-left">
+                    <label htmlFor="room">Room #</label>
                     <input
                       name="room"
                       type="text"
                       id="room"
                       className="form-control"
                       value={input.room}
+                      autoComplete="off"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                    />
+                  </div>
+                  <div className="form-group col-4 text-left">
+                    <label htmlFor="msc">MSC</label>
+                    <input
+                      name="msc"
+                      type="text"
+                      id="msc"
+                      className="form-control"
+                      value={input.msc}
                       autoComplete="off"
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -497,21 +515,8 @@ function App() {
                     }
                   />
                 </div>
-                <div className="form-row">
-                  <div className="form-group col-6 text-left">
-                    <label htmlFor="msc">MSC</label>
-                    <input
-                      name="msc"
-                      type="text"
-                      id="msc"
-                      className="form-control"
-                      value={input.msc}
-                      autoComplete="off"
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                    />
-                  </div>
-                  <div className="form-group col-6 text-left">
+                <div className="form-row">                
+                  <div className="form-group col-12 text-left">
                     <label htmlFor="mailing">Mailing Address</label>
                     <div className="input-group">
                       <input
@@ -586,10 +591,10 @@ function App() {
           </div>
         </div>
         {/* Right: The Preview */}
-        <div className="col-md-5 col-12">
-          <div className=" w-100 card shadow">
+        <div className="col-md-6 col-12">
+          <div className="bg-light w-100 card shadow">
             <div className="card-body">
-              <h3 className="mb-2 text-left">Preview</h3>
+              <h2 className="mb-2 text-left">Preview</h2>
               <div
                 className="border rounded p-3 mb-2 bg-white text-left"
                 style={{ background: "#fff" }}
