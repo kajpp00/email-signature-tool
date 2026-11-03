@@ -291,7 +291,7 @@ function App() {
 
   return (
     <div className="container-fluid my-5">
-      {/* <h1 className="text-center mb-5">Email Signature Generator</h1> */}
+      <h1 className="text-center mb-5">Email Signature Generator</h1>
       <div className="row justify-content-center align-item-start">
         {/* Left: The form */}
         <div className="col-md-5 col-12 mb-4 mb-md-0">
@@ -594,7 +594,7 @@ function App() {
         <div className="col-md-5 col-12">
           <div className="w-100 border-0 bg-light card shadow">
             <div className="card-body">
-              <p className="h4 mb-2 text-left">Preview</p>
+              <h2 className="h4 mb-2 text-left">Preview</h2>
               <div
                 className="border rounded p-3 mb-2 bg-white text-left"
                 style={{ background: "#fff" }}
