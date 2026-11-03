@@ -295,7 +295,7 @@ function App() {
       <div className="row justify-content-center align-item-start">
         {/* Left: The form */}
         <div className="col-md-5 col-12 mb-4 mb-md-0">
-          <div className="bg-light card h-100 shadow">
+          <div className="card h-100 border-0 ">
             <div className="card-body">
               <form autoComplete="off" onSubmit={handleSubmit} noValidate>
                 <div className="form-group text-left">
@@ -591,10 +591,10 @@ function App() {
           </div>
         </div>
         {/* Right: The Preview */}
-        <div className="col-md-6 col-12">
-          <div className="bg-light w-100 card shadow">
+        <div className="col-md-5 col-12">
+          <div className="w-100 border-0 bg-light card shadow">
             <div className="card-body">
-              <h2 className="mb-2 text-left">Preview</h2>
+              <h2 className="h4 mb-2 text-left">Preview</h2>
               <div
                 className="border rounded p-3 mb-2 bg-white text-left"
                 style={{ background: "#fff" }}
