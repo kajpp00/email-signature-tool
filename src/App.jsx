@@ -86,7 +86,9 @@ function App() {
           .filter((r) => r.BUILDING_DISPLAY_NAME)
           .map((r) => r.BUILDING_DISPLAY_NAME);
         setBuildingOptions([...bOpts, "Other"]);
+
         const bMap = {};
+
         function abbreviateStreetTypes(address) {
           return address.replace(
             /\b(Alley|Avenue|Boulevard|Bridge|Circle|Court|Drive|Highway|Lane|Parkway|Place|Road|Street|Terrace|Trail)\b/gi,
